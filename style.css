@@ -1,0 +1,82 @@
+/* -- Import Google Font --*/ 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+/* --- RESET --- */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    /* Use flexbox to center content on page */ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* background image */ 
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+
+    /* font for page */ 
+    font-family: 'Lato', sans-serif;
+    color:#fff;   
+}
+
+/* Background Overlay */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Content inside the body displayed above the background overlay */ 
+body * {
+    z-index: 1; 
+}
+  
+
+/* --- HEADING --- */
+
+.heading-container {
+    margin: 30px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 5rem;
+}
+
+
+/* --- COUNTDOWN --- */
+
+.countdown-container {
+    padding: 20px;
+}
+
+.card {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+/* --- YEAR --- */ 
+
+#year {
+    font-size: 200px;
+    z-index: -1;
+}
